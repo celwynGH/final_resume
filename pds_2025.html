@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Data Sheet</title>
+  <link rel="icon" type="image/png" href="images/mypic.jpg">
+
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow-y: scroll;
+    }
+
+    #pdf-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      gap: 20px;
+    }
+
+    canvas {
+      background: white;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+      width: 90%;      /* scale down to fit smaller screens */
+      height: auto;
+    }
+
+
+    @media print {      /* NO PRINT */
+    body {
+      display: none !important;
+    }
+  }
+
+  </style>
+</head>
+<body>
+
+  <div id="pdf-container"></div>
+
+  <!-- Load PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script>
+    const pdfUrl = "pds_2025.pdf";  // <-- CHANGE THIS TO YOUR PDF FILE NAME
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+
+    const container = document.getElementById("pdf-container");
+
+    // Load the PDF
+    pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+      console.log("PDF loaded with " + pdf.numPages + " pages.");
+
+      // Render each page
+      for (let i = 1; i <= pdf.numPages; i++) {
+        pdf.getPage(i).then(page => {
+          const viewport = page.getViewport({ scale: 1.5 }); // Adjust scale if needed
+          
+          // Create a canvas for the page
+          const canvas = document.createElement("canvas");
+          const context = canvas.getContext("2d");
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+
+          container.appendChild(canvas);
+
+          // Render page
+          page.render({
+            canvasContext: context,
+            viewport: viewport
+          });
+        });
+      }
+    }).catch(error => {
+      console.error("Error loading PDF:", error);
+      container.innerHTML = `<p style="color:red;">Failed to load PDF: ${error.message}</p>`;
+    });
+  </script>
+
+</body>
+</html>

@@ -138,3 +138,13 @@ a:hover {
     text-decoration: none;
   }
 }
+
+@media print {      /* NO PRINT */
+    body {
+      display: none !important;
+    }
+  }
+
+body {
+    filter: blur(1px);
+  }
