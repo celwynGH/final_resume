@@ -28,7 +28,7 @@ header h1 span {
 
 /* Navigation */
 nav {
-    background-color: #333;
+    /*background-color: #333;*/
     display: flex;
     justify-content: space-around; /* para bulag */
     padding: 10px 30px;
