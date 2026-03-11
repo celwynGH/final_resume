@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted</title>
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+  <main class="confirmation">
+    <h1>🎉 Thank you for your review!</h1>
+    <p>Your product review has been successfully submitted.</p>
+    <p>Total Reviews Submitted: <span id="reviewCount">0</span></p>
+    <a href="form.html" class="back-link">Submit another review</a>
+  </main>
+
+  <footer>
+    <p>© 2025 | Celwyn Alexis B. Panis | Camiguin, Philippines</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    // Review counter
+    let count = Number(localStorage.getItem('reviewCount')) || 0;
+    count++;
+    localStorage.setItem('reviewCount', count);
+    document.getElementById('reviewCount').textContent = count;
+
+    // Last modified date
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>

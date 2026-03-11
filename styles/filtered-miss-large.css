@@ -1,0 +1,48 @@
+:root {
+  --maxwidth: 1200px;
+}
+
+/* Hide hamburger */
+.hamburger {
+  display: none;
+}
+
+/* Horizontal nav */
+.main-nav {
+  display: block !important;
+}
+
+.main-nav ul {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* Gallery: multi-columns */
+.gallery {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Footer layout */
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+}
+
+
+/* temples-large.css */
+nav ul {
+  flex-direction: row;
+  justify-content: center;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.album {
+  grid-template-columns: repeat(3, 1fr);
+}

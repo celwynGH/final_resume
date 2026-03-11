@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  background: #111;
+  user-select: none;
+}
+
+/* PDF container */
+#pdf-container {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* PDF canvas */
+#pdf-container canvas {
+  width: 90%;
+  height: auto;
+  pointer-events: none;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+/* Watermark */
+.watermark {
+  position: absolute;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.1);
+  transform: rotate(-30deg);
+  pointer-events: none;
+}
+
+/* Anti-screenshot overlay */
+#antisnap {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: none;
+}
+
+/* Block print */
+@media print {
+  body {
+    display: none !important;
+  }
+}
+
+/* CANVAS (BLURRED + NONCOPYABLE) */
+#pdf-container canvas {
+  filter: blur(4px);
+  width: 90%;
+  height: auto;
+  pointer-events: none;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}

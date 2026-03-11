@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive picture album showcasing temple images with captions, built for WDD131.">
+  <meta name="author" content="Celwyn Alexis B. Panis">
+  <title>Missionary Album</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 800px)">
+
+  <!-- JS -->
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h2 class="site-title">Temple Album</h2>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="main-nav">☰</button>
+
+      <nav id="main-nav" class="main-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Old</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Large</a></li>
+          <li><a href="#">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="gallery">
+         <!-- 9 Temple Images -->
+      <figure>
+        <img src="images/davao_temple1.webp" alt="Davao Temple">
+        <figcaption>Davao City, Philippines</figcaption>
+      </figure>
+      <figure>
+        <img src="images/cdo_temple2.webp" alt="Cagayan de Oro Temple">
+        <figcaption>Cagayan de Oro City, Philippines</figcaption>
+      </figure>
+      <figure>
+        <img src="images/alabang_temple3.webp" alt="Alabang Temple">
+        <figcaption>Alabang, Philippines</figcaption>
+      </figure>
+      <figure>
+        <img src="images/sanjose_temple4.jpg" alt="San Jose Temple">
+        <figcaption>San Jose, Philippines</figcaption>
+      </figure>
+      <figure>
+        <img src="images/manila_temple5.jpg" alt="Manila Temple">
+        <figcaption>Manila, Philippines</figcaption>
+      </figure>
+      <figure>
+        <img src="images/urdaneta_temple6.jpg" alt="Urdaneta Temple">
+        <figcaption>Urdaneta, Philippines</figcaption>
+      </figure>
+      <figure>
+        <img src="images/tuguegarao_temple7.jpg" alt="Tuguegarao Temple">
+        <figcaption>Tuguegarao, Philippines</figcaption>
+      </figure>
+      <figure>
+        <img src="images/tacloban_temple8.jpg" alt="Tacloban Temple">
+        <figcaption>Tacloban, Philippines</figcaption>
+      </figure>
+      <figure>
+        <img src="images/cebu_temple9.jpg" alt="Cebu Temple">
+        <figcaption>Cebu, Philippines</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="copyright-year"></span> | Celwyn Alexis B. Panis | Philippines</p>
+      <p>Last Modification: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

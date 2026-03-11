@@ -1,0 +1,226 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
+
+#course-title {
+  color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    
+}
+header h1 span {
+    color: #ffd700; /* yellow name */
+}
+
+/* Navigation */
+nav {
+    /*background-color: #333;*/
+    display: flex;
+    justify-content: space-around; /* para bulag */
+    padding: 10px 30px;
+}
+header nav {
+  margin-top: 20px; /* dugang ani */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: lightblue; /* changed it to lightblue */
+    text-decoration: underline;
+}
+
+/* Main Layout */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Added this */
+}
+
+/* Card Style (About Me + Resources) */
+section, aside {
+    background: white;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+section h2, aside h2 {
+    background-color: #1e4b7a;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+}
+section > div, aside > ul, section > p {
+    padding: 15px;
+}
+
+/* About Me section */
+#about {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    text-align: justify;
+}
+#about img {
+    width: 150px;
+    border-radius: 8px;
+}
+
+/* Location */
+h3 {
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: underline;
+      
+}
+#location {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 15px;
+}
+#location img {
+    width: 100px;
+    border: 1px solid #ccc;
+}
+#location p {
+    margin: 0;
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: justify;
+}
+
+/* Web Dev Resources */
+aside ul {
+    list-style-type: none;
+    padding: 0 15px 15px 15px;
+    margin: 0;
+}
+aside li {
+    margin: 8px 0;
+}
+aside a {
+    color: #1e4b7a;
+    text-decoration: none;
+}
+aside a:hover {
+    text-decoration: underline;
+}
+
+    /* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+footer span {
+    color: #ffd700;
+    font-weight: bold;
+}
+footer .last-mod {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+/* Chatbot */
+
+#chat-bot{
+position:fixed;
+bottom:20px;
+right:20px;
+z-index:1000;
+}
+
+/* Chat Button */
+#chat-toggle{
+background:#007bff;
+color:white;
+border:none;
+border-radius:50%;
+width:70px;
+height:70px;
+font-size:32px;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Chat Window */
+#chat-window{
+display:none;
+width:300px;
+height:400px;
+background:white;
+border:1px solid #ddd;
+position:absolute;
+bottom:80px;
+right:0;
+flex-direction:column;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+border-radius:10px;
+}
+
+/* Header */
+.chat-header{
+background:#007bff;
+color:white;
+padding:15px;
+border-radius:10px 10px 0 0;
+font-family:sans-serif;
+}
+
+/* Messages */
+#messages{
+flex:1;
+padding:10px;
+overflow-y:auto;
+font-family:sans-serif;
+font-size:14px;
+}
+
+/* Input */
+#user-input{
+width:100%;
+border:none;
+border-top:1px solid #ddd;
+padding:10px;
+box-sizing:border-box;
+}

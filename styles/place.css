@@ -1,0 +1,107 @@
+:root {
+  --primary: blue;
+  --secondary: red;
+  --light: #f8f9fa;
+  --dark: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #eafaf1;
+  color: var(--dark);
+}
+
+header {
+  background: var(--primary);
+  color: yellow;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-container {
+  position: relative; /* Needed for overlay positioning */
+}
+
+section {
+  background: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.map-embed {
+  width: 100%; /* Added map */
+  border: 0;
+  margin-top: 1rem;
+}
+
+.data h2, .weather h2 {
+  background: var(--secondary);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Weather icon pseudo-element for desktop view */
+.weather h2::after {
+  content: none; /* removed the icon here "⛅" */
+}
+
+.weather-icon {
+  width: 50px;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* Responsive layout---Show the icon only on larger screens (desktop/tablet) */
+@media (min-width: 768px) {
+  .weather h2::after {
+    content: "⛅";
+  }
+
+
+  /* Overlay boxes on hero image */
+  .data, .weather {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9); /* slight transparency */
+    max-width: 300px;
+  } 
+
+
+
+  
+
+  .data {
+    top: 10%;
+    left: 5%;
+  }
+
+  .weather {
+    bottom: 10%;
+    right: 5%;
+  }
+
+  .weather-icon {
+    display: none; /* hide svg icon on larger screens */
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Celwyn Alexis B. Panis">
+  <meta name="description" content="Discover Camiguin Island, Philippines — its natural beauty, weather, and culture.">
+  <title>Camiguin Province Philippines</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Camiguin Island</h1>
+  </header>
+
+  <main>
+    <!--Hero Section-->
+    <div class="hero-container">
+      <picture>
+        <source srcset="images/camiguin-wide.webp" media="(min-width: 600px)">
+        <img src="images/camiguin-mobile.webp" alt="Camiguin Island" class="hero">
+      </picture>
+
+      <!--Overlay sections-->
+      <section class="data">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Area:</strong> 241.44 sq km</li>
+          <li><strong>Population:</strong> 94,892</li>
+          <li><strong>Capital:</strong> Mambajao</li>
+          <li><strong>Languages:</strong> Filipino, Visayan, English</li>
+          <li><strong>Currency:</strong> Philippines Peso</li>
+          <li><strong>Time Zone:</strong> GMT+8</li>
+          <li><strong>Calling Code:</strong> +63-88</li>
+          <li><strong>Internet TLD:</strong> .ph</li>
+        </ul>
+
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d87078.57773068182!2d124.7561406028614!3d9.183301722589265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sph!4v1758255132709!5m2!1sen!2sph" 
+        height="300" 
+        allowfullscreen
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      </section>
+
+      <section class="weather">
+        <h2>Weather</h2>
+        <img src="images/weather.svg" alt="Partly Cloudy" class="weather-icon">
+        <ul>
+          <li><strong>Temperature:</strong> <span id="temp">10</span> °C</li>
+          <li><strong>Conditions:</strong> Partly Cloudy</li>
+          <li><strong>Wind:</strong> <span id="wind">5</span> km/h</li>
+          <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+        </ul>
+      </section>
+
+
+    </div>
+  </main>
+
+  <!--Footer-->
+  <footer>
+    <p>© <span id="year"></span> | Celwyn Alexis B. Panis | Camiguin, Philippines</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
