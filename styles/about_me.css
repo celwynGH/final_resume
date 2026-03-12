@@ -160,67 +160,107 @@ footer .last-mod {
 
 /* Chatbot */
 
-#chat-bot{
+/* Floating button */
+
+#chat-toggle{
 position:fixed;
 bottom:20px;
 right:20px;
-z-index:1000;
-}
-
-/* Chat Button */
-#chat-toggle{
+width:60px;
+height:60px;
 background:#007bff;
 color:white;
-border:none;
-border-radius:50%;
-width:70px;
-height:70px;
-font-size:32px;
+font-size:28px;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
+border-radius:50%;
 cursor:pointer;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Chat Window */
+/* Chat window */
+
 #chat-window{
-display:none;
-width:300px;
-height:400px;
+position:fixed;
+bottom:90px;
+right:20px;
+width:320px;
+height:420px;
 background:white;
-border:1px solid #ddd;
-position:absolute;
-bottom:80px;
-right:0;
-flex-direction:column;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
 border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+display:none;
+flex-direction:column;
+overflow:hidden;
 }
 
-/* Header */
-.chat-header{
+#chat-header{
 background:#007bff;
 color:white;
-padding:15px;
-border-radius:10px 10px 0 0;
-font-family:sans-serif;
+padding:10px;
+display:flex;
+justify-content:space-between;
 }
 
-/* Messages */
-#messages{
+#chat-body{
 flex:1;
 padding:10px;
 overflow-y:auto;
-font-family:sans-serif;
-font-size:14px;
+background:#f5f5f5;
 }
 
-/* Input */
-#user-input{
-width:100%;
-border:none;
-border-top:1px solid #ddd;
+/* Chat bubbles */
+
+.bot{
+background:#e4e6eb;
+padding:8px;
+border-radius:10px;
+margin:5px 0;
+max-width:80%;
+}
+
+.user{
+background:#007bff;
+color:white;
+padding:8px;
+border-radius:10px;
+margin:5px 0;
+max-width:80%;
+margin-left:auto;
+}
+
+/* Options */
+
+#chat-options{
 padding:10px;
-box-sizing:border-box;
+border-top:1px solid #ddd;
+}
+
+.option-btn{
+width:100%;
+margin:4px 0;
+padding:8px;
+border:none;
+background:#007bff;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.option-btn:hover{
+background:#0056b3;
+}
+
+#chat-controls{
+display:flex;
+justify-content:space-between;
+padding:5px;
+border-top:1px solid #ddd;
+}
+
+#chat-controls button{
+border:none;
+padding:5px 10px;
+cursor:pointer;
 }

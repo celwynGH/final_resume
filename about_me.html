@@ -135,25 +135,25 @@
   </footer>
 
   <!-- Chatbot start -->
-<div id="chat-bot">
+<!-- Chat Button -->
+<div id="chat-toggle" onclick="toggleChat()">💬</div>
 
-    <button id="chat-toggle">
-        💬
-    </button>
-    
-    <div id="chat-window">
+<!-- Chat Window -->
+<div id="chat-window">
 
-        <div class="chat-header">
-            <strong>Helper Bot</strong>
-        </div>
+<div id="chat-header">
+Help Assistant
+<span onclick="toggleChat()">✖</span>
+</div>
 
-        <div id="messages">
-            <p><strong>Bot:</strong> Hello! How can I help you today?</p>
-        </div>
+<div id="chat-body"></div>
 
-        <input type="text" id="user-input" placeholder="Type here...">
+<div id="chat-options"></div>
 
-    </div>
+<div id="chat-controls">
+<button onclick="goBack()">⬅ Back</button>
+<button onclick="restartChat()">Restart</button>
+</div>
 
 </div>
 <!-- Chatbot end -->
