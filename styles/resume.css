@@ -1,3 +1,39 @@
+/* ===== PAGE BACKGROUND ===== */
+body{
+  background:#e5e5e5;
+  display:flex;
+  justify-content:center;
+  padding:40px 0;
+}
+
+/* ===== BOND PAPER ===== */
+.paper{
+  width:210mm;
+  min-height:297mm;
+  background:white;
+  padding:25mm;
+  box-shadow:0 0 15px rgba(0,0,0,0.2);
+  box-sizing:border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ====== GENERAL STYLES ====== */
 body {
   font-family: "Century Gothic", sans-serif;
@@ -144,7 +180,7 @@ a:hover {
   }*/
 
 body {
-    filter: blur(1px);
+    filter: blur(1px);  /* BLUR EFFECT */
   }
 
 
