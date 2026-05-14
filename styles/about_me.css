@@ -30,8 +30,9 @@ header h1 span {
 nav {
     /*background-color: #333;*/
     display: flex;
-    justify-content: space-around; /* para bulag */
+    justify-content: flex-end; /* move items to the right */
     padding: 10px 30px;
+    gap: 20px; /* optional spacing between links */
 }
 header nav {
   margin-top: 20px; /* dugang ani */
@@ -79,8 +80,13 @@ section h2, aside h2 {
     border-top-right-radius: 8px;
     text-align: center;
 }
-section > div, aside > ul, section > p {
+section > div,
+aside > ul {
     padding: 15px;
+}
+
+section p {
+    margin: 4px 15px;
 }
 
 /* About Me section */
